@@ -83,6 +83,8 @@ async function handleLoadMore() {
     checkEndOfCollection();
     scrollPage();
   } catch (error) {
+    page -= 1;
+
     iziToast.error({
       message: 'Something went wrong. Please try again later.',
       position: 'topRight',
