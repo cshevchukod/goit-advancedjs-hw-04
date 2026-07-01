@@ -9,6 +9,8 @@ import {
   hideLoader,
   showLoadMoreButton,
   hideLoadMoreButton,
+  makeLoadMoreButtonInvisible,
+  makeLoadMoreButtonVisible,
 } from './js/render-functions.js';
 
 const form = document.querySelector('.form');
@@ -71,7 +73,7 @@ async function handleSubmit(event) {
 async function handleLoadMore() {
   page += 1;
 
-  hideLoadMoreButton();
+  makeLoadMoreButtonInvisible();
   showLoader();
 
   try {
@@ -85,6 +87,8 @@ async function handleLoadMore() {
       message: 'Something went wrong. Please try again later.',
       position: 'topRight',
     });
+
+    makeLoadMoreButtonVisible();
   } finally {
     hideLoader();
   }

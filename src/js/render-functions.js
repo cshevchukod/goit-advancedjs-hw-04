@@ -55,8 +55,18 @@ export function hideLoader() {
 
 export function showLoadMoreButton() {
   loadMoreBtn.classList.remove('is-hidden');
+  loadMoreBtn.classList.remove('is-invisible');
 }
 
 export function hideLoadMoreButton() {
   loadMoreBtn.classList.add('is-hidden');
+  loadMoreBtn.classList.remove('is-invisible');
+}
+
+export function makeLoadMoreButtonInvisible() {
+  loadMoreBtn.classList.add('is-invisible');
+}
+
+export function makeLoadMoreButtonVisible() {
+  loadMoreBtn.classList.remove('is-invisible');
 }
