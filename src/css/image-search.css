@@ -114,3 +114,28 @@
 .image-info span {
   font-weight: 600;
 }
+
+.load-more-btn {
+  display: block;
+  min-width: 125px;
+  height: 40px;
+  margin: 32px auto 0;
+  padding: 8px 16px;
+  border: 2px solid #8a8a8a;
+  border-radius: 4px;
+  background-color: #efefef;
+  color: #242424;
+  font-size: 16px;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.load-more-btn:hover,
+.load-more-btn:focus {
+  background-color: #e8e8e8;
+  border-color: #4d4d4d;
+}
+
+.is-hidden {
+  display: none;
+}
